@@ -1,5 +1,5 @@
-function Plugin(){}
 Plugin.alert = function(content){
-  window.alert(content);
+  var onSuccess = function(){};
+  var onFail = function(){};
+  cordova.exec(onSuccess, onFail, 'AlertPlugin', 'alert', [content]);
 };
-module.exports = Plugin;
