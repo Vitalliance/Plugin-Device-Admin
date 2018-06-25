@@ -1,7 +1,7 @@
 {
   "name": "cordova-alert-plugin",
   "version": "0.0.1",
-  "description": "An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.",
+  "description": "An Android Cordova plugin that allows users to diy simple Toast messages at the bottom of the screen.",
   "cordova": {
     "id": "cordova-alert-plugin",
     "platforms": [
@@ -10,24 +10,21 @@
   },
  "repository": {
     "type": "git",
-    "url": "git+https://Pauwels@bitbucket.org/Pauwels/testplugin.git"
+    "url": "git+https://github.com/Vitalliance/Plugin-Test.git"
   },
 
   "keywords": [
     "Alert",
+    "cordova",
     "ecosystem:cordova",
     "cordova-android"
   ],
   "engines": [
     {
-      "name": "cordova",
+      "name": "cordova-android",
       "version": ">=3.0.0"
     }
   ],
   "author": "Pauwels Paul le beau gosse du Nord/Sud",
-  "license": "Apache 2.0",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": ""
+  "license": "Apache 2.0"
 }

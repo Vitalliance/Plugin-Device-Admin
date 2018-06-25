@@ -7,8 +7,7 @@
     <description>A plugin to show native alert</description>
     <license>Apache 2.0</license>
     <keywords>cordova,plugin,alert</keywords>
-    <repo>https://github.com/yourgithubname/cordova-alert-plugin.git</repo>
-    <issue>https://github.com/yourgithubname/cordova-alert-plugin/issues</issue>
+    <repo>https://github.com/Vitalliance/Plugin-Test.git</repo>
 
     <js-module src="www/plugin.js" name="Alert">
         <clobbers target="cordova.plugins.Alert" />
