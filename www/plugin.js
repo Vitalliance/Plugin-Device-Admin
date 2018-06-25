@@ -4,3 +4,4 @@ Plugin.alert = function(content){
   var onFail = function(){};
   cordova.exec(onSuccess, onFail, 'AlertPlugin', 'alert', [content]);
 };
+module.exports = AlertTest;
