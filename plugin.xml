@@ -9,12 +9,12 @@
     <keywords>Device,plugin,admin,Debug</keywords>
     <repo>https://github.com/vitalliance/Plugin-Device-Admin.git</repo>
 
-    <js-module src="www/plugin.js" name="Alert">
+    <js-module src="www/plugin.js" name="Admin">
         <clobbers target="cordova.plugins.DeviceAdmin" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="AlertPlugin" >
+            <feature name="DeviceAdmin" >
                 <param name="android-package" value="com.example.cordova.DeviceAdmin"/>
             </feature>
         </config-file>
