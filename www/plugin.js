@@ -1,6 +1,7 @@
 
 Plugin.Admin = function(){
   var onSuccess = function(data){
+  	console.log(data);
   	return data;
   };
   var onFail = function(){};

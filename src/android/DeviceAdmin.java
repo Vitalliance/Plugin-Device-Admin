@@ -28,4 +28,4 @@ public class DeviceAdmin extends CordovaPlugin {
   
   return adb;
   }
-}
+}   
