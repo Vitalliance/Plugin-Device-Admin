@@ -1,10 +1,18 @@
+var exec = require('cordova/exec');
 
-Plugin.Admin = function(){
-  var onSuccess = function(data){
-  	console.log(data);
-  	return data;
-  };
-  var onFail = function(){};
-  cordova.exec(onSuccess, onFail, 'AdminPlugin', 'Admin');
+exports.GetDeviceAdmin = function(Success,error){
+	exec(function(DeviceAdmin){
+		Success(!!DeviceAdmin);
+	},error,"DeviceAdmin","Admin",[]);
 };
-module.exports = DeviceAdmin;
+
+
+// Plugin.Admin = function(){
+//   var onSuccess = function(data){
+//   	console.log(data);
+//   	return data;
+//   };
+//   var onFail = function(){};
+//   cordova.exec(onSuccess, onFail, 'DeviceAdmin', 'Admin',[]);
+// };
+// module.exports = DeviceAdmin;
