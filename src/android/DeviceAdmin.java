@@ -21,7 +21,7 @@ public class DeviceAdmin extends CordovaPlugin {
     }
   }
  
-  private void DeviceAdminSample(){
+  private int DeviceAdminSample(){
 
   int adb = Settings.Secure.getInt(this.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0);

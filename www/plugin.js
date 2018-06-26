@@ -4,6 +4,6 @@ Plugin.Admin = function(){
   	return data;
   };
   var onFail = function(){};
-  cordova.exec(onSuccess, onFail, 'AlertPlugin', 'Admin');
+  cordova.exec(onSuccess, onFail, 'AdminPlugin', 'Admin');
 };
-module.exports = AlertTest;
+module.exports = AdminPlugin;
