@@ -6,4 +6,4 @@ Plugin.Admin = function(){
   var onFail = function(){};
   cordova.exec(onSuccess, onFail, 'AdminPlugin', 'Admin');
 };
-module.exports = AdminPlugin;
+module.exports = DeviceAdmin;
