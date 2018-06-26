@@ -1,9 +1,9 @@
 {
-  "name": "cordova-alert-plugin-test",
-  "version": "0.0.8",
+  "name": "cordova.plugins.DeviceAdmin",
+  "version": "0.0.1",
   "description": "An Android Cordova plugin that allows users to diy simple Toast messages at the bottom of the screen.",
   "cordova": {
-    "id": "cordova-alert-plugi-test",
+    "id": "cordova.plugins.DeviceAdmin",
     "platforms": [
       "android"
     ]
@@ -14,7 +14,7 @@
   },
 
   "keywords": [
-    "Alert",
+    "Device",
     "cordova",
     "ecosystem:cordova",
     "cordova-android"
