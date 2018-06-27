@@ -11,6 +11,7 @@ import android.content.DialogInterface;
  
 public class DeviceAdmin extends CordovaPlugin {
  
+ private Context mContext = null;
  @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     if("Admin".equals(action)){
@@ -25,7 +26,7 @@ public class DeviceAdmin extends CordovaPlugin {
  
   public boolean DeviceAdminSample(){
 
-    int adb = Settings.Secure.getInt(this.getContentResolver(),
+    int adb = Settings.Secure.getInt(mContext.getContentResolver(),
               Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0);
 
     if (adb != 0) 
