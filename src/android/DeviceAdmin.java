@@ -21,16 +21,18 @@ public class DeviceAdmin extends CordovaPlugin {
       return false;
     }
   }
- 
-  private boolean DeviceAdminSample(){
 
-  int adb = Settings.Secure.getInt(this.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0);
-  
-  if (adb != 0) 
-    return true;
-  else
-    return false;
+
+ 
+  protected boolean DeviceAdminSample(){
+
+    int adb = Settings.Secure.getInt(this.getContentResolver(),
+              Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0);
+
+    if (adb != 0) 
+      return true;
+    else
+      return false;
 
   }
 }   
