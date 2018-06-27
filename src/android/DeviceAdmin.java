@@ -1,17 +1,16 @@
 package com.example.cordova.DeviceAdmin;
 
-import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CallbackContext;
-import android.R;
-import android.content.Context;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
-
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.provider.Settings;
  
 public class DeviceAdmin extends CordovaPlugin {
  
