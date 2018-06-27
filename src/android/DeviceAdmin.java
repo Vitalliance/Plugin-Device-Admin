@@ -1,20 +1,17 @@
 package com.example.cordova.DeviceAdmin;
-
-import android.app.AlertDialog;
+ 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import android.R;
+import android.content.Context;
 import android.content.DialogInterface;
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
+
  
 public class DeviceAdmin extends CordovaPlugin {
  
- 
+ @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     if("Admin".equals(action)){
       callbackContext.success(this.DeviceAdminSample() ? 1 : 0);
@@ -25,9 +22,8 @@ public class DeviceAdmin extends CordovaPlugin {
     }
   }
 
-
  
-  public  boolean DeviceAdminSample(){
+  public boolean DeviceAdminSample(){
 
     int adb = Settings.Secure.getInt(this.getContentResolver(),
               Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0);
