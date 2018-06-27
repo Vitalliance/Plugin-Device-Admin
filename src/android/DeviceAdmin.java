@@ -1,5 +1,9 @@
 package com.example.cordova.DeviceAdmin;
- 
+
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.apache.cordova.CordovaPlugin;
