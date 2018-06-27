@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-alert-plugin-Device-Admin"
+        id="cordova-plugin-deviceadmin-vitalliance"
         version="0.0.11">
     <name>Device Admin</name>
     <description>A plugin to check if Device Admin enabled</description>
