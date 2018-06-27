@@ -7,6 +7,8 @@ import org.apache.cordova.CallbackContext;
 import android.R;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.provider.Settings.NameValueTable
+import android.provider.Settings.Global
 
  
 public class DeviceAdmin extends CordovaPlugin {
