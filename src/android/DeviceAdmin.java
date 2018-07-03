@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.provider.Settings.NameValueTable;
 import android.provider.Settings.Global;
+import android.provider.Settings;
 
  
 public class DeviceAdmin extends CordovaPlugin {
