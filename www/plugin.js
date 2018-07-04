@@ -2,7 +2,7 @@
 
 exports.GetDeviceAdmin = function(Success,error){
 	cordova.exec(function(DeviceAdmin){
-		Success(!!DeviceAdmin);
+		Success(DeviceAdmin);
 	},error,"DeviceAdmin","Admin",[]);
 };
 
