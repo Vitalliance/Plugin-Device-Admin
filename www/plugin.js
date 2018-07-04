@@ -17,10 +17,3 @@ exports.GetDeviceAdmin = function(Success,error){
 // };
 // module.exports = DeviceAdmin;
 
-
-gda(a,b){
-exec(a)
-exec(b)
-
-
-}
