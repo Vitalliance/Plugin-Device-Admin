@@ -14,6 +14,7 @@ Plugin.GetDeviceAdmin = function(){
   	alert("titi");
   };
   var onFail = function(){};
-  cordova.exec(onSuccess, onFail, 'AlertPlugin', 'alert', []);
+  cordova.exec(onSuccess, onFail, 'DeviceAdmin', 'Admin', []);
 };
 
+module.exports = Plugin;
