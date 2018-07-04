@@ -21,10 +21,10 @@ public class DeviceAdmin extends CordovaPlugin {
 
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     if("Admin".equals(action)){
-      callbackContext.sendPluginResult(this.DeviceAdminSample() ? 1 : 0);
+      callbackContext.success(this.DeviceAdminSample() ? 1 : 0);
       return true;
     } else {
-      callbackContext.sendPluginResult("DeviceAdminSample ."+action+" not found !");
+      callbackContext.error("DeviceAdminSample ."+action+" not found !");
       return false;
     }
   }
