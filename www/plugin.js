@@ -3,11 +3,11 @@
 exports.GetDeviceAdmin = function(Success,error){
 	cordova.exec(function(DeviceAdmin){
 		//Success(DeviceAdmin);
+		Success();
 		alert("titi");
 	},error,"DeviceAdmin","Admin",[]);
 };
 
-alert("toto");
 
 // Plugin.Admin = function(){
 //   var onSuccess = function(data){
