@@ -33,7 +33,7 @@ public class DeviceAdmin extends CordovaPlugin {
 
    PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
    pluginResult.setKeepCallback(true);
-   pushContext.sendPluginResult(pluginResult);
+   mContext.sendPluginResult(pluginResult);
 
    return true;
   } else {
