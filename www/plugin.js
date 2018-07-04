@@ -1,7 +1,7 @@
-var exec = require('cordova/exec');
+//var exec = require('cordova/exec');
 
 exports.GetDeviceAdmin = function(Success,error){
-	exec(function(DeviceAdmin){
+	cordova.exec(function(DeviceAdmin){
 		Success(!!DeviceAdmin);
 	},error,"DeviceAdmin","Admin",[]);
 };
@@ -16,3 +16,11 @@ exports.GetDeviceAdmin = function(Success,error){
 //   cordova.exec(onSuccess, onFail, 'DeviceAdmin', 'Admin',[]);
 // };
 // module.exports = DeviceAdmin;
+
+
+gda(a,b){
+exec(a)
+exec(b)
+
+
+}
