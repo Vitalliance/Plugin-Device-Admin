@@ -23,7 +23,6 @@ var GetDeviceAdmin = function(successCallback, errorCallback) {
 
 setTimeout(function() {
     successCallback = function(result) {
-        successCallback(result);
         alert(result);
     };
     errorCallback = function(error) {
