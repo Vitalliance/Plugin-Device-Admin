@@ -21,11 +21,12 @@ import android.view.accessibility.AccessibilityManager;
 
 public class DeviceAdmin extends CordovaPlugin {
 
+ private Context mContext = null;
 
  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
   if ("Admin".equals(action)) {
 
-   int adb = Settings.Secure.getInt(callbackContext.getContentResolver(),
+   int adb = Settings.Secure.getInt(mContext.getContentResolver(),
     Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
    JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
