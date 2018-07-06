@@ -25,14 +25,14 @@ public class DeviceAdmin extends CordovaPlugin {
  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
   if ("Admin".equals(action)) {
 
-   int adb = Settings.Secure.getInt(mContext.getContentResolver(),
+   int adb = Settings.Secure.getInt(callbackContext.getContentResolver(),
     Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
    JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
 
    PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
    pluginResult.setKeepCallback(true);
-   CallbackContext.sendPluginResult(pluginResult);
+   callbackContext.sendPluginResult(pluginResult);
 
    return true;
   } else {
