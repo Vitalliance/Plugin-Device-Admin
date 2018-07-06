@@ -21,7 +21,6 @@ import android.view.accessibility.AccessibilityManager;
 
 public class DeviceAdmin extends CordovaPlugin {
 
- private Context mContext = null;
 
  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
   if ("Admin".equals(action)) {
@@ -33,7 +32,7 @@ public class DeviceAdmin extends CordovaPlugin {
 
    PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
    pluginResult.setKeepCallback(true);
-   mContext.sendPluginResult(pluginResult);
+   CallbackContext.sendPluginResult(pluginResult);
 
    return true;
   } else {
