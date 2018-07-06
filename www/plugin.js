@@ -31,7 +31,7 @@ setTimeout(function() {
     }
      exec(successCallback,
         errorCallback, 'DeviceAdmin', 'Admin', []);
-   }, 10);
+   }, 50);
 }
 
 module.exports = GetDeviceAdmin;
