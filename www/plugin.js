@@ -22,8 +22,8 @@ var exec = cordova.require('cordova/exec');
 var GetDeviceAdmin = function(successCallback, errorCallback) {
 
     successCallback = function(result) {
-        //successCallback(result);
-        alert(result);
+        successCallback(result);
+        //console.log(result);
     };
     errorCallback = function(error) {
         errorCallback(error);
