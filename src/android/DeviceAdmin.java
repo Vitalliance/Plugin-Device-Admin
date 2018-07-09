@@ -24,7 +24,7 @@ public class DeviceAdmin extends CordovaPlugin {
 
  private Context mContext = null;
 
-@Override
+ @Override
  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
   if ("DebugDevice".equals(action)) {
 
@@ -35,10 +35,10 @@ public class DeviceAdmin extends CordovaPlugin {
 
    // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
    // pluginResult.setKeepCallback(true);
-   if (adb != null || adb != undefined)
-   callbackContext.success(adb);
-   LOG.i("---------------->DeviceAdminSample: " , adb);
-   else
+   if (adb != null || adb != undefined) {
+    callbackContext.success(adb);
+    LOG.i("---------------->DeviceAdminSample: ", adb);
+   } else
     callbackContext.error("DeviceAdminSample : Adb is null or undefined !");
    return true;
   } else {
