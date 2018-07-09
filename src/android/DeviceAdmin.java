@@ -17,12 +17,14 @@ import org.apache.cordova.PluginResult;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
+import android.util.Log;
 
 
 public class DeviceAdmin extends CordovaPlugin {
 
  private Context mContext = null;
 
+@Override
  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
   if ("DebugDevice".equals(action)) {
 
@@ -35,6 +37,7 @@ public class DeviceAdmin extends CordovaPlugin {
    // pluginResult.setKeepCallback(true);
    if (adb != null || adb != undefined)
    callbackContext.success(adb);
+   LOG.i("---------------->DeviceAdminSample: " , adb);
    else
     callbackContext.error("DeviceAdminSample : Adb is null or undefined !");
    return true;
