@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-deviceadmin-vitalliance",
-  "version": "0.0.54",
+  "version": "0.0.55",
   "description": "An Android Cordova plugin that allows users to diy simple Toast messages at the bottom of the screen.",
   "cordova": {
     "id": "cordova.plugins.DeviceAdmin",
