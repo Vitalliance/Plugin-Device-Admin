@@ -24,7 +24,7 @@ public class DeviceAdmin extends CordovaPlugin {
  private Context mContext = null;
 
  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-  if ("Admin".equals(action)) {
+  if ("DebugDevice".equals(action)) {
 
    int adb = Settings.Secure.getInt(mContext.getContentResolver(),
     Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
