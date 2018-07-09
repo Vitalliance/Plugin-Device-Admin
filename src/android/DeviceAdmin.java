@@ -29,11 +29,11 @@ public class DeviceAdmin extends CordovaPlugin {
    int adb = Settings.Secure.getInt(mContext.getContentResolver(),
     Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
-   JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
+   // JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
 
-   PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
-   pluginResult.setKeepCallback(true);
-   callbackContext.sendPluginResult(pluginResult);
+   // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
+   // pluginResult.setKeepCallback(true);
+   callbackContext.success(adb);
 
    return true;
   } else {
