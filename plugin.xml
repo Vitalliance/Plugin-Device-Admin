@@ -19,7 +19,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/DeviceAdmin.java" target-dir="src/com/example/cordova/Admin"/>
+        <source-file src="src/android/DeviceAdmin.java" target-dir="src/com/example/cordova/DeviceAdmin"/>
     </platform>
 
 </plugin>
