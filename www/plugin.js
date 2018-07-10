@@ -22,7 +22,7 @@ var GetDeviceAdmin = {};
 
 GetDeviceAdmin.Device = function(successCallback) {
 
-     exec(successCallback,errorCallback, 'DeviceAdmin', 'DebugDevice', []);
+     exec(successCallback,function(){console;log("DeviceAdminSample: not found !")}, 'DeviceAdmin', 'DebugDevice', []);
 };
 
 module.exports = GetDeviceAdmin;
