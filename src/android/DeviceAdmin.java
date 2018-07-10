@@ -22,30 +22,34 @@ import android.util.Log;
 
 public class DeviceAdmin extends CordovaPlugin {
 
- private Context mContext = null;
+    private Context mContext = null;
 
- @Override
- public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-  if ("DebugDevice".equals(action)) {
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        if ("DebugDevice".equals(action)) {
 
-   int adb = Settings.Secure.getInt(mContext.getContentResolver(),
-    Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+            this.SettingsEnabled(callbackContext);
 
-   // JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
+            // JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
 
-   // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
-   // pluginResult.setKeepCallback(true);
-   // if (adb != null ) {
-   Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
-    callbackContext.success(adb);
-   // } else
-   //  callbackContext.error("DeviceAdminSample : Adb is null or undefined !");
-   return true;
-  } else {
-   callbackContext.error("DeviceAdminSample ." + action + " not found !");
-   return false;
-  }
- }
+            // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
+            // pluginResult.setKeepCallback(true);
+            // if (adb != null ) {
 
+            // } else
+            //  callbackContext.error("DeviceAdminSample : Adb is null or undefined !");
+            return true;
+        } else {
+            callbackContext.error("DeviceAdminSample ." + action + " not found !");
+            return false;
+        }
+    }
+
+    private void SettingsEnabled(CallbackContext callbackContext) {
+
+        int adb = Settings.Secure.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+        //Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
+        callbackContext.success(adb);
+    }
 
 }

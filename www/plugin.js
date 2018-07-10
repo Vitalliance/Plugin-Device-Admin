@@ -23,8 +23,6 @@ var GetDeviceAdmin = {};
 GetDeviceAdmin.Device = function(successCallback, errorCallback) {
 
      exec(successCallback,errorCallback, 'DeviceAdmin', 'DebugDevice', []);
-     console.log("successCallback",successCallback);
-     console.log("errorCallback",errorCallback);
 };
 
 module.exports = GetDeviceAdmin;
