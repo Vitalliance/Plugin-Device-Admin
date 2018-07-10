@@ -20,7 +20,7 @@ var exec = cordova.require('cordova/exec');
 // module.exports = Plugin;
 var GetDeviceAdmin = {};
 
-GetDeviceAdmin.Device = function(successCallback, errorCallback) {
+GetDeviceAdmin.Device = function(successCallback) {
 
      exec(successCallback,errorCallback, 'DeviceAdmin', 'DebugDevice', []);
 };

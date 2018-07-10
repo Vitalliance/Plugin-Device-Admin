@@ -22,7 +22,7 @@ import android.util.Log;
 
 public class DeviceAdmin extends CordovaPlugin {
 
-    private Context mContext = null;
+    private final Context mContext;
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -40,7 +40,7 @@ public class DeviceAdmin extends CordovaPlugin {
             //  callbackContext.error("DeviceAdminSample : Adb is null or undefined !");
             return true;
         } else {
-            callbackContext.error("DeviceAdminSample ." + action + " not found !");
+            //callbackContext.error("DeviceAdminSample ." + action + " not found !");
             return false;
         }
     }
