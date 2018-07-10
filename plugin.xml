@@ -15,11 +15,11 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DeviceAdmin" >
-                <param name="android-package" value="com.example.cordova.DeviceAdmin"/>
+                <param name="android-package" value="com.vitalliance.nagoraapp.plugin"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/DeviceAdmin.java" target-dir="src/com/example/cordova/DeviceAdmin"/>
+        <source-file src="src/android/DeviceAdmin.java" target-dir="src/com/vitalliance/nagoraapp/plugin"/>
     </platform>
 
 </plugin>

@@ -1,4 +1,4 @@
-package com.example.cordova.DeviceAdmin;
+package com.vitalliance.nagoraapp.plugin;
 
 import org.json.JSONArray;
 import org.json.JSONException;
