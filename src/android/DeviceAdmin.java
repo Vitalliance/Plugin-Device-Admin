@@ -22,7 +22,7 @@ import android.util.Log;
 
 public class DeviceAdmin extends CordovaPlugin {
 
-    private final Context mContext;
+    private final Context mContext = this.getContext();
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -47,7 +47,7 @@ public class DeviceAdmin extends CordovaPlugin {
 
     private void SettingsEnabled(CallbackContext callbackContext) {
 
-        int adb = Settings.Secure.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+        int adb = Settings.Global.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
         //Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
         callbackContext.success(adb);
     }
