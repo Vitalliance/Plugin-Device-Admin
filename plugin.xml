@@ -9,7 +9,7 @@
     <keywords>Device,plugin,admin,Debug</keywords>
     <repo>https://github.com/vitalliance/Plugin-Device-Admin.git</repo>
 
-    <js-module src="www/plugin.js" name="Admin">
+    <js-module src="www/plugin.js" name="antidebug">
         <clobbers target="cordova.plugins.GetDeviceAdmin" />
     </js-module>
     <platform name="android">
