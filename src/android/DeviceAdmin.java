@@ -36,7 +36,7 @@ public class DeviceAdmin extends CordovaPlugin {
    // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
    // pluginResult.setKeepCallback(true);
    // if (adb != null ) {
-   Log.i("---------------->DeviceAdminSample: ", Integer.toString(adb));
+   Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
     callbackContext.success(adb);
    // } else
    //  callbackContext.error("DeviceAdminSample : Adb is null or undefined !");

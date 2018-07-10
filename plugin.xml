@@ -10,7 +10,7 @@
     <repo>https://github.com/vitalliance/Plugin-Device-Admin.git</repo>
 
     <js-module src="www/plugin.js" name="Admin">
-        <clobbers target="cordova.plugins.DeviceAdmin" />
+        <clobbers target="cordova.plugins.GetDeviceAdmin" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
