@@ -49,7 +49,8 @@ public class DeviceAdmin extends CordovaPlugin {
         int adb = Settings.Global.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         //Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
 
-        JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
+        JSONObject json = new JSONObject();
+        json.put("DEVELOPMENT_SETTINGS_ENABLED", adb);
         callbackContext.success(json);
     }
 
