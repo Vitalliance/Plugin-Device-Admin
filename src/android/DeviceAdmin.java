@@ -29,14 +29,6 @@ public class DeviceAdmin extends CordovaPlugin {
         if ("DebugDevice".equals(action)) {
 
             this.SettingsEnabledPlugin(callbackContext);
-
-            
-            // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
-            // pluginResult.setKeepCallback(true);
-            // if (adb != null ) {
-
-            // } else
-            //  callbackContext.error("DeviceAdminSample : Adb is null or undefined !");
             return true;
         } else {
             callbackContext.error("DeviceAdminSample ." + action + " not found !");
@@ -47,11 +39,7 @@ public class DeviceAdmin extends CordovaPlugin {
     private void SettingsEnabledPlugin(CallbackContext callbackContext) {
 
         int adb = Settings.Global.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
-        //Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
-
-        JSONObject json = new JSONObject();
-        json.put("DEVELOPMENT_SETTINGS_ENABLED", adb);
-        callbackContext.success(json);
+        callbackContext.success(adb);
     }
 
 }
