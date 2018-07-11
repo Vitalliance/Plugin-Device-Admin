@@ -27,7 +27,7 @@ public class DeviceAdmin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("DebugDevice".equals(action)) {
-
+            mContext = this.cordova.getActivity().getApplicationContext();
             this.SettingsEnabledPlugin(callbackContext);
             return true;
         } else {
