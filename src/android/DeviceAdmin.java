@@ -29,9 +29,11 @@ public class DeviceAdmin extends CordovaPlugin {
         if ("DebugDevice".equals(action)) {
 
             //this.SettingsEnabledPlugin(callbackContext);
-            callbackContext.success(1);
-            // JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
 
+            JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", 1);
+
+            callbackContext.success(json);
+            
             // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
             // pluginResult.setKeepCallback(true);
             // if (adb != null ) {
