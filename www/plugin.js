@@ -24,7 +24,7 @@ var GetDeviceAdmin = {};
 GetDeviceAdmin.Device = function(successCallback) {
 
     exec(function(successCallback) {
-        utils.alert("adb: " + JSON.stringify(adb));
+        console.log("adb: " + successCallback);
     }, function(e) {
         console.log("DeviceAdminSample: not found !");
         utils.alert('[ERROR] Error initializing Cordova: ' + e);
