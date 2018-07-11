@@ -30,7 +30,7 @@ public class DeviceAdmin extends CordovaPlugin {
 
             //this.SettingsEnabledPlugin(callbackContext);
 
-            JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", 1);
+
 
             callbackContext.success(json);
             
@@ -49,9 +49,11 @@ public class DeviceAdmin extends CordovaPlugin {
 
     private void SettingsEnabledPlugin(CallbackContext callbackContext) {
 
-        //int adb = Settings.Global.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
+        int adb = Settings.Global.getInt(mContext.getContentResolver(),Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
         //Log.i("----------------> DeviceAdminSample: ", Integer.toString(adb));
-        callbackContext.success(1);
+
+        JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
+        callbackContext.success(json);
     }
 
 }
