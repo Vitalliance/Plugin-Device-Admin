@@ -22,7 +22,7 @@ import android.util.Log;
 
 public class DeviceAdmin extends CordovaPlugin {
 
-    private Context mContext = this.getApplicationContext();
+    private  static Context mContext;
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
