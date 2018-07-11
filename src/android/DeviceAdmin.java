@@ -28,8 +28,8 @@ public class DeviceAdmin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("DebugDevice".equals(action)) {
 
-            this.SettingsEnabledPlugin(callbackContext);
-
+            //this.SettingsEnabledPlugin(callbackContext);
+            callbackContext.success(1);
             // JSONObject json = new JSONObject().put("DEVELOPMENT_SETTINGS_ENABLED", adb);
 
             // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, json);
