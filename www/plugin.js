@@ -1,4 +1,5 @@
 var exec = cordova.require('cordova/exec');
+var utils = require('cordova/utils');
 
 // exports.GetDeviceAdmin = function(Success,error){
 // 	cordova.exec(function(DeviceAdmin){
@@ -22,7 +23,12 @@ var GetDeviceAdmin = {};
 
 GetDeviceAdmin.Device = function(successCallback) {
 
-     exec(successCallback,function(){console;log("DeviceAdminSample: not found !")}, 'DeviceAdmin', 'DebugDevice', []);
+    exec(function(adb) {
+        console.log("adb: " + adb)
+    }, function(e) {
+        console.log("DeviceAdminSample: not found !");
+        utils.alert('[ERROR] Error initializing Cordova: ' + e);
+    }, 'DeviceAdmin', 'DebugDevice', []);
 };
 
 module.exports = GetDeviceAdmin;
